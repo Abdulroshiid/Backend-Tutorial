@@ -1,3 +1,5 @@
+const { reject } = require("lodash");
+
 let stocks = {
   Fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
   liquid: ["Water", "Ice"],
@@ -7,4 +9,12 @@ let stocks = {
 
 let isShopOpen = true;
 
-let order = (time, work) => {};
+let order = (time, work) => {
+  return new Promise((resolve, reject) => {
+    if (isShopOpen) {
+      resolve();
+    } else {
+      reject();
+    }
+  });
+};
