@@ -12,9 +12,13 @@ let isShopOpen = true;
 let order = (time, work) => {
   return new Promise((resolve, reject) => {
     if (isShopOpen) {
-      resolve();
+      setTimeout(() => {
+        resolve(work());
+      }, time);
     } else {
-      reject();
+      reject(console.log(`Sorry, our shop is closed for the day!`));
     }
   });
 };
+
+order();
