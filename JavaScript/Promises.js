@@ -1,5 +1,3 @@
-const { reject } = require("lodash");
-
 let stocks = {
   Fruits: ["Strawberry", "Grapes", "Banana", "Apple"],
   liquid: ["Water", "Ice"],
