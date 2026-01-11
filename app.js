@@ -17,3 +17,8 @@ const lodash = require("lodash");
 
 const items = [1, [2, [3, 4]]];
 const newItems = lodash.flatMapDeep(items);
+
+const greetUser = `Hello, Abdulrasheed! Be proud of yourself. You've crossed another milestone`;
+console.log(greetUser);
+
+console.log(newItems);
