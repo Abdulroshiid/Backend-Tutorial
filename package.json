@@ -1,10 +1,10 @@
 {
   "name": "backend-tutorial",
   "version": "1.0.0",
-  "main": "add-value.js",
+  "main": "fs-asynchronousModule.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node add-value.js",
+    "dev": "nodemon folder/fs-asynchronousModule.js"
   },
   "keywords": [],
   "author": "",
