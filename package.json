@@ -1,9 +1,9 @@
 {
   "name": "backend-tutorial",
   "version": "1.0.0",
-  "main": "fs-asynchronousModule.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node JavaScript/asyncAwait.js",
     "dev": "nodemon folder/fs-asynchronousModule.js"
   },
   "keywords": [],
