@@ -18,7 +18,7 @@ function guessNumberPromise() {
     console.log(randomNumber);
 
     setTimeout(() => {
-      if (randomNumber === 5) {
+      if (randomNumber < 10) {
         resolve("You guessed number 5 correctly and its' the right number!");
       } else {
         reject("Opps! Keep guessing man!");
