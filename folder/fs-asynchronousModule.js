@@ -14,7 +14,7 @@ readFile("./folder/first.txt", "utf8", (error, result) => {
         console.log(result);
         writeFile(
           "./folder/fourth.txt",
-          `I created a file using the asyncronous fs method`,
+          `I created a file using the asyncronous file system method method`,
           "utf8",
           (error, result) => {
             if (error) {
@@ -30,7 +30,7 @@ readFile("./folder/first.txt", "utf8", (error, result) => {
                 }
               });
             }
-          }
+          },
         );
       }
     });
