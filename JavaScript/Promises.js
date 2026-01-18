@@ -69,7 +69,7 @@ const stiringProccess = new Promise((resolve, reject) => {
     } else {
       reject(`There is no turning stick available.`);
     }
-  }, 3000);
+  }, 4000);
 });
 
 const makeSoup = new Promise((resolve, reject) => {
@@ -80,34 +80,22 @@ const makeSoup = new Promise((resolve, reject) => {
     } else {
       reject(`Ewedu have finish.`);
     }
-  }, 4000);
+  }, 3000);
 });
 
-boilWater
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
+const doTheTasks = async () => {
+  boilWater.then((boilWaterResult) => {
+    console.log(boilWaterResult);
   });
-readyToPourG4
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
+  readyToPourG4.then((readyToPourG4Result) => {
+    console.log(readyToPourG4Result);
   });
-stiringProccess
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
+  stiringProccess.then((stiringProccessResult) => {
+    console.log(stiringProccessResult);
   });
-makeSoup
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
+  makeSoup.then((makeSoupResult) => {
+    console.log(makeSoupResult);
   });
+};
+
+doTheTasks();
