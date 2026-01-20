@@ -84,18 +84,15 @@ const makeSoup = new Promise((resolve, reject) => {
 });
 
 const doTheTasks = async () => {
-  boilWater.then((boilWaterResult) => {
+  try {
+    const boilWaterResult = await boilWater;
     console.log(boilWaterResult);
-  });
-  readyToPourG4.then((readyToPourG4Result) => {
+
+    const readyToPourG4Result = await readyToPourG4;
     console.log(readyToPourG4Result);
-  });
-  stiringProccess.then((stiringProccessResult) => {
-    console.log(stiringProccessResult);
-  });
-  makeSoup.then((makeSoupResult) => {
-    console.log(makeSoupResult);
-  });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 doTheTasks();
