@@ -95,7 +95,7 @@ const doTheTasks = async () => {
     console.log(stiringProccessResult);
 
     const makeSoupResult = await makeSoup;
-    console.log();
+    console.log(makeSoupResult);
   } catch (error) {
     console.log(error);
   }
