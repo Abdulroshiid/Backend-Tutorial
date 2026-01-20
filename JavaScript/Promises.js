@@ -90,6 +90,12 @@ const doTheTasks = async () => {
 
     const readyToPourG4Result = await readyToPourG4;
     console.log(readyToPourG4Result);
+
+    const stiringProccessResult = await stiringProccess;
+    console.log(stiringProccessResult);
+
+    const makeSoupResult = await makeSoup;
+    console.log();
   } catch (error) {
     console.log(error);
   }
