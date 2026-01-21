@@ -5,4 +5,3 @@ function addValue(num1, num2, num3) {
 }
 
 addValue(2, 2, 2);
-// JavaScript/Promises.js
