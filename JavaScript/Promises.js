@@ -76,7 +76,7 @@ const makeSoup = new Promise((resolve, reject) => {
   setTimeout(() => {
     const isSoupReady = true;
     if (isSoupReady) {
-      resolve(`Serve yourself and chow`);
+      resolve(`Take some soup and serve yourself`);
     } else {
       reject(`Ewedu have finish.`);
     }
