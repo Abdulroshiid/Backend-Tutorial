@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node JavaScript/Promises.js",
+    "start": "node add-value.js",
     "dev": "nodemon JavaScript/asyncAwait.js"
   },
   "keywords": [],
