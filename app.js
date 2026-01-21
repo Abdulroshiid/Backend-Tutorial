@@ -22,4 +22,4 @@ console.log(newItems);
 const greetUser = `Hello, Abdulrasheed! Be proud of yourself. You've crossed another milestone`;
 console.log(greetUser);
 
-console.log(`And with time, everything changes. Though, it is tough`);
+console.log(`And with time, everything changes. It is tough, yes I know.`);
