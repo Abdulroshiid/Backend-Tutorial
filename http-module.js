@@ -6,7 +6,10 @@ const server = http.createServer((req, res) => {
   } else if (req.url === "/about") {
     res.end("This is the about us page");
   } else {
-    res.end("Opps! This is not available");
+    res.end(`
+    <h1>The page you are looking for is unavailable at the moment.</h1>
+    <a href="/">Go back home</a>
+    `);
   }
 });
 
