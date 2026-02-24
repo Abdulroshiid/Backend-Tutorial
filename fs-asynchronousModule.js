@@ -14,7 +14,7 @@ readFile("./folder/first.txt", "utf8", (error, result) => {
         console.log(result);
         writeFile(
           "./folder/fourth.txt",
-          `I created a file using the asyncronous file system method method`,
+          `I created a file using the asyncronous file system method`,
           "utf8",
           (error, result) => {
             if (error) {

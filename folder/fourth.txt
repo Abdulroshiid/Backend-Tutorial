@@ -1,1 +1,1 @@
-I created a file using the asyncronous file system method method
+I created a file using the asyncronous file system method
