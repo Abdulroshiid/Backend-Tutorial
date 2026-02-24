@@ -1,1 +1,1 @@
-Hello, this is second text file
+And yeah... Here we are again... This is a read file method from the second txt.
