@@ -15,12 +15,12 @@ const readAndWriteFile = async (firstPath, secondPath) => {
 
     // Wrote the file and read it here...
     await writeFile(
-      "./content/sub-folder/dashboard.txt",
+      "./folder/sub-folder/dashboard.txt",
       `Testing if this could work... Then to the highest :)`,
-      "utf-8",
     );
     const readThirdFile = await readFile(
-      "./content/folder/sub-folder/dashboard.txt",
+      "./folder/sub-folder/dashboard.txt",
+      "utf-8",
     );
     console.log(readThirdFile);
   } catch (error) {
