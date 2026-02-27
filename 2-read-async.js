@@ -19,6 +19,10 @@ const readAndWriteFile = async (firstPath, secondPath) => {
       `Testing if this could work... Then to the highest :)`,
       "utf-8",
     );
+    const readThirdFile = await readFile(
+      "./content/folder/sub-folder/dashboard.txt",
+    );
+    console.log(readThirdFile);
   } catch (error) {
     console.log(error);
   }
