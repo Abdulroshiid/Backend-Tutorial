@@ -14,24 +14,34 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "content-type": "text/html" });
     res.write(homePage);
     res.end();
-    // About Page
-  } else if (url === "/about") {
+  }
+  // About Page
+  else if (url === "/about") {
     res.writeHead(200, { "content-type": "text/html" });
     res.write("This is the About Page");
     res.end();
-    // Styles Page
-  } else if (url === "/styles") {
+  }
+  // Styles Page
+  else if (url === "/styles.css") {
     res.writeHead(200, { "content-type": "text/css" });
     res.write(homeStyle);
     res.end();
-    // Logo Page
-  } else if (url === "/logo") {
-    res.writeHead(200, { "content-type": "text/svg" });
+  }
+  // Logo Page
+  else if (url === "/logo.svg") {
+    res.writeHead(200, { "content-type": "image/svg+xml" });
     res.write(homeLogo);
     res.end();
-    // Logic Page (JavaScript)
-  } else {
-    res.writeHead(404, { "content-type": "text/html" });
+  }
+  // Logic Page (JavaScript)
+  else if (url === "/browser-app.js") {
+    res.writeHead(200, { "content-type": "text/javascript" });
+    res.write(homeLogic);
+    res.end();
+  }
+  // Error Page
+  else {
+    res.writeHead(404, { "content-type": "text/plane" });
     res.write(`Page Not Found!`);
     res.end();
   }
