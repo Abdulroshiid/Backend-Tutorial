@@ -4,10 +4,10 @@ const { products } = require("./data");
 const PORT = 5000;
 
 app.get("/", (req, res) => {
-  res.send(`<h1>Home Page</h1><a href="/api/products">Our Products</a>`);
+  res.send(`<h1>Home Page</h1><a href="/products">Our Products</a>`);
 });
 
-app.get("/api/products", (req, res) => {
+app.get("/products", (req, res) => {
   res.json(products);
 });
 
