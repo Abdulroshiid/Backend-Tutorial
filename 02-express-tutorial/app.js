@@ -12,10 +12,11 @@ app.get("/api/products", (req, res) => {
     const { id, name, price } = product;
     return { id, name, price };
   });
-  console.log(newProducts);
   res.json(newProducts);
 });
-
+app.get("/api/products/:productId", (req, res) => {
+  console.log(req.params.productId);
+});
 app.listen(PORT, () => {
   console.log(`Server Listening on Port ${PORT}`);
 });
