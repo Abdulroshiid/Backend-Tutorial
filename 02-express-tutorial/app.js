@@ -25,6 +25,10 @@ app.get("/api/products/:productId", (req, res) => {
   }
   res.json(getSingleProduct);
 });
+app.get("/api/products/:productId/reviews/:reviewId", (req, res) => {
+  console.log(req.params);
+  res.send(`Hello, World!!`);
+});
 app.listen(PORT, () => {
   console.log(`Server Listening on Port ${PORT}`);
 });
