@@ -29,6 +29,14 @@ app.get("/api/products/:productId/reviews/:reviewId", (req, res) => {
   console.log(req.params);
   res.send(`Hello, World!!`);
 });
+
+app.get("/api/products/v1/query", (req, res) => {
+  console.log(req.query);
+  const { search, limit } = req.query;
+
+  res.send("Test the query");
+});
+
 app.listen(PORT, () => {
   console.log(`Server Listening on Port ${PORT}`);
 });
