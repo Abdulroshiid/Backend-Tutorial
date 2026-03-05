@@ -15,7 +15,8 @@ app.get("/api/products", (req, res) => {
   res.json(newProducts);
 });
 app.get("/api/products/:productId", (req, res) => {
-  console.log(req.params.productId);
+  const getSingleProduct = products.find((product) => product.id === 2);
+  res.json(getSingleProduct);
 });
 app.listen(PORT, () => {
   console.log(`Server Listening on Port ${PORT}`);
