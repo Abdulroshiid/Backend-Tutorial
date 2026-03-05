@@ -20,7 +20,9 @@ app.get("/api/products/:productId", (req, res) => {
   const getSingleProduct = products.find(
     (product) => product.id === idSelection,
   );
-  console.log(req.params.productId);
+  if (!getSingleProduct) {
+    return res.status(404).send(`Opps! Product Does Not Exist`);
+  }
   res.json(getSingleProduct);
 });
 app.listen(PORT, () => {
