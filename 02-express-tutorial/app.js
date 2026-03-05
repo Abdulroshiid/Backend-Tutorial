@@ -15,7 +15,12 @@ app.get("/api/products", (req, res) => {
   res.json(newProducts);
 });
 app.get("/api/products/:productId", (req, res) => {
-  const getSingleProduct = products.find((product) => product.id === 2);
+  const idSelection = Number(req.params.productId);
+
+  const getSingleProduct = products.find(
+    (product) => product.id === idSelection,
+  );
+  console.log(req.params.productId);
   res.json(getSingleProduct);
 });
 app.listen(PORT, () => {
