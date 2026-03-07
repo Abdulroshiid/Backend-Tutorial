@@ -2,10 +2,11 @@ const express = require("express");
 const app = express();
 const PORT = 5000;
 const logger = require("./logger");
+const authorize = require("./authorize");
 const data = require("./data");
 
 // req => middleware => res
-app.use(logger);
+app.use([logger, authorize]);
 
 app.get("/", (req, res) => {
   res.send(`Home Page`);
