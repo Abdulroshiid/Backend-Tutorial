@@ -9,10 +9,10 @@ const data = require("./data");
 app.use([logger, authorize]);
 
 app.get("/", (req, res) => {
-  res.send(`Home Page`);
+  res.send(`Home-Page`);
 });
 app.get("/about", (req, res) => {
-  res.send(`About Page`);
+  res.send(`About-Page`);
 });
 app.get("/api/data", (req, res) => {
   res.json(data.products);
