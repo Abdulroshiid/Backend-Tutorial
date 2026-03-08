@@ -18,6 +18,7 @@ app.get("/api/data", (req, res) => {
   res.json(data.products);
 });
 app.get("/api/data/people", (req, res) => {
+  console.log(req.user);
   res.json(data.people);
 });
 
