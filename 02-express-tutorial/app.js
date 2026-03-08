@@ -15,7 +15,7 @@ app.get("/about", (req, res) => {
   res.send(`About Page`);
 });
 app.get("/api/data", (req, res) => {
-  res.json(data.products[3]);
+  res.json(data.products);
 });
 app.get("/api/data/people", (req, res) => {
   res.json(data.people);
