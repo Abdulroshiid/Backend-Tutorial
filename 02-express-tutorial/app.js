@@ -18,7 +18,7 @@ app.get("/api/data", (req, res) => {
   res.json(data.products[3]);
 });
 app.get("/api/data/people", (req, res) => {
-  res.json(data.people[0]);
+  res.json(data.people);
 });
 
 app.listen(PORT, () => {
