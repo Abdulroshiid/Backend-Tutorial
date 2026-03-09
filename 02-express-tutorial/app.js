@@ -24,5 +24,5 @@ app.get("/api/data/people", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is Listening on port ${PORT}...`);
+  console.log(`Server is listening to port ${PORT}...`);
 });
