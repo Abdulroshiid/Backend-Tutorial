@@ -4,7 +4,7 @@ const authorize = (req, res, next) => {
     req.user = { name: "john", id: 3 };
     next();
   } else {
-    res.status(401).send("Unauthorized!");
+    res.status(401).send("You are not authorized!");
   }
 };
 
