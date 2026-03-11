@@ -10,7 +10,13 @@ app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
 app.post("/login", (req, res) => {
-  res.send("POST");
+  console.log(req.body);
+  const { name } = req.body;
+  if (name) {
+    res.status(200).send(`Welcome, ${name}`);
+  } else {
+    res.status(401).send(`Please, provide the necessary credentials.`);
+  }
 });
 
 app.listen(PORT, () => {
