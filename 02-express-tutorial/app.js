@@ -15,7 +15,7 @@ app.post("/login", (req, res) => {
   if (name) {
     res.status(200).send(`Welcome, ${name}`);
   } else {
-    res.status(401).send(`Please, provide the necessary credentials.`);
+    res.status(401).send(`Please, enter a user name.`);
   }
 });
 
