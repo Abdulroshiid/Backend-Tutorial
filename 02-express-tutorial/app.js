@@ -4,11 +4,17 @@ const PORT = 5000;
 let { people } = require("./data");
 // Static assets
 app.use(express.static("./methods-public"));
+// Parse form data
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
+
+app.post("/api/people", (req, res) => {
+  res.status(201).send(`Successful`);
+});
+
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
