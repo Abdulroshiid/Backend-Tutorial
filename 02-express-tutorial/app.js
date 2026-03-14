@@ -26,7 +26,9 @@ app.post("/api/people", (req, res) => {
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
-    res.status(200).send(`Welcome, ${name}`);
+    res
+      .status(200)
+      .send(`Welcome, ${name}, your account have been created successfully.`);
   } else {
     res.status(401).send(`Please, enter a user name.`);
   }
