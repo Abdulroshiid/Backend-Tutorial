@@ -16,11 +16,11 @@ app.get("/api/people", (req, res) => {
 app.post("/api/people", (req, res) => {
   const { name } = req.body;
   if (!name) {
-    res
+    return res
       .status(400)
       .json({ success: false, msg: `Please, provide a user name.` });
   }
-  res.status(201).send("success");
+  res.status(201).send({ succcess: true, person: name });
 });
 
 app.post("/login", (req, res) => {
