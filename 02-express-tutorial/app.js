@@ -23,6 +23,10 @@ app.post("/api/people", (req, res) => {
   res.status(201).send({ succcess: true, person: name });
 });
 
+app.post("/api/postman/people", (req, res) => {
+  const { name } = req.body;
+});
+
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
