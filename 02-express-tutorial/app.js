@@ -44,6 +44,13 @@ app.post("/login", (req, res) => {
   }
 });
 
+app.put("/api/people/:id", (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+
+  const person = person.find((person) => person.id === Number(id));
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}...`);
 });
