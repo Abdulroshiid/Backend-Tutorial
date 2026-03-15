@@ -30,7 +30,7 @@ app.post("/api/postman/people", (req, res) => {
       .status(400)
       .json({ success: false, msg: `Please, providde a user name.` });
   }
-  res.status(201).send({ succcess: true, date: [...people, name] });
+  res.status(201).send({ succcess: true, data: [...people, name] });
 });
 
 app.post("/login", (req, res) => {
