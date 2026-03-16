@@ -9,6 +9,17 @@ app.use(express.urlencoded({ extended: false }));
 // parse json
 app.use(express.json());
 
+app.post("/login", (req, res) => {
+  const { name } = req.body;
+  if (name) {
+    res
+      .status(200)
+      .send(`Welcome, ${name}, your account have been created successfully.`);
+  } else {
+    res.status(401).send(`Please, enter a user name.`);
+  }
+});
+
 app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
@@ -25,7 +36,7 @@ app.post("/api/people", (req, res) => {
   res.status(201).send({ succcess: true, person: name });
 });
 
-app.post("/api/postman/people", (req, res) => {
+app.post("/api/people/postman", (req, res) => {
   const { name } = req.body;
   if (!name) {
     return res
@@ -33,17 +44,6 @@ app.post("/api/postman/people", (req, res) => {
       .json({ success: false, msg: `Please, providde a user name.` });
   }
   res.status(201).send({ succcess: true, data: [...people, name] });
-});
-
-app.post("/login", (req, res) => {
-  const { name } = req.body;
-  if (name) {
-    res
-      .status(200)
-      .send(`Welcome, ${name}, your account have been created successfully.`);
-  } else {
-    res.status(401).send(`Please, enter a user name.`);
-  }
 });
 
 // THE PUT METHOD
