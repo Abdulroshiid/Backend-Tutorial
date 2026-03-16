@@ -70,6 +70,21 @@ app.put("/api/people/:id", (req, res) => {
 
 // THE DELETE METHOD
 
+app.delete("/api/people/:id", (req, res) => {
+  const person = people.find((person) => person.id === Number(req.params.id));
+
+  if (!person) {
+    return res.status(404).json({
+      succcess: false,
+      msg: `No person with id ${req.params.id} exists.`,
+    });
+  }
+  const newPerson = people.filter(
+    (person) => person.id !== Number(req.params.id),
+  );
+  return res.status(200).json({ success: true, data: newPerson });
+});
+
 app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}...`);
 });
