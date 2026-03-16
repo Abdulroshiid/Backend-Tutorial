@@ -13,6 +13,8 @@ app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
 
+// THE POST METHOD
+
 app.post("/api/people", (req, res) => {
   const { name } = req.body;
   if (!name) {
@@ -44,6 +46,8 @@ app.post("/login", (req, res) => {
   }
 });
 
+// THE PUT METHOD
+
 app.put("/api/people/:id", (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
@@ -63,6 +67,8 @@ app.put("/api/people/:id", (req, res) => {
   });
   res.status(200).json({ success: true, data: newPeople });
 });
+
+// THE DELETE METHOD
 
 app.listen(PORT, () => {
   console.log(`Server is listening to port ${PORT}...`);
