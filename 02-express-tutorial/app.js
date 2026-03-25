@@ -12,9 +12,7 @@ app.use(express.json());
 app.post("/login", (req, res) => {
   const { name } = req.body;
   if (name) {
-    res
-      .status(200)
-      .send(`Welcome, ${name}, your account have been created successfully.`);
+    res.status(200).send(`Welcome, ${name}, your account have been created.`);
   } else {
     res.status(401).send(`Please, enter a user name.`);
   }
