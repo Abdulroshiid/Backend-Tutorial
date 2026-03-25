@@ -37,7 +37,10 @@ router.put("/api/people/:id", (req, res) => {
   if (!person) {
     return res
       .status(404)
-      .json({ success: false, msg: `No person with id ${id} exists.` });
+      .json({
+        success: false,
+        msg: `The person with id ${id} does not exists.`,
+      });
   }
 
   const newPeople = people.map((person) => {
