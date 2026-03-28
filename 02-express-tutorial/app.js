@@ -3,7 +3,7 @@ const app = express();
 const PORT = 5000;
 
 const people = require("./routes/people");
-const login = require("./routes/auth");
+const auth = require("./routes/auth");
 
 // Static assets
 app.use(express.static("./methods-public"));
