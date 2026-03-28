@@ -22,7 +22,7 @@ const postUser = (req, res) => {
   res.status(201).send({ succcess: true, data: [...people, name] });
 };
 
-const putUser = (req, res) => {
+const updateUser = (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
 
@@ -57,3 +57,5 @@ const deleteUser = (req, res) => {
   );
   return res.status(200).json({ success: true, data: newPerson });
 };
+
+module.exports = { getUser, post, postUser, updateUser, deleteUser };
