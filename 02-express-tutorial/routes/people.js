@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-let { people } = require("../data");
-
 router.get("/");
 
 // THE POST METHOD
