@@ -4,7 +4,9 @@ const router = express.Router();
 router.post("/", (req, res) => {
   const { name } = req.body;
   if (name) {
-    res.status(200).send(`Welcome, ${name}, your account have been created.`);
+    res
+      .status(200)
+      .send(`Welcome, ${name}, your account have been created successfully.`);
   } else {
     res.status(401).send(`Please, enter a user name.`);
   }
