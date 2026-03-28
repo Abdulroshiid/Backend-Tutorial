@@ -10,6 +10,8 @@ const {
   deleteUser,
 } = require("../controllers/people");
 
+// FIRST WAY OF ROUTING
+
 //THE GET METHOD
 router.get("/", getUser);
 // THE POST METHOD
@@ -19,5 +21,11 @@ router.post("/postuser", postUser);
 router.put("/:id", updateUser);
 // THE DELETE METHOD
 router.delete("/:id", deleteUser);
+
+// SECOND WAY OF ROUTING... PS: MORE CLEANER AND WELL STRUCTURED
+
+// router.route("/").get(getUser).post(post);
+// router.route("/postUser").post(postUser);
+// router.route("/:id").put(updateUser).delete(deleteUser);
 
 module.exports = router;
