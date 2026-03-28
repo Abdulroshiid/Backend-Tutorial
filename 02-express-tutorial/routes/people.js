@@ -9,20 +9,20 @@ const {
   deleteUser,
 } = require("../controllers/people");
 
-router.get("/");
+router.get("/", getUser);
 
 // THE POST METHOD
 
-router.post("/");
+router.post("/", post);
 
-router.post("/postuser");
+router.post("/postuser", postUser);
 
 // THE PUT METHOD
 
-router.put("/:id");
+router.put("/:id", updateUser);
 
 // THE DELETE METHOD
 
-router.delete("/:id");
+router.delete("/:id", deleteUser);
 
 module.exports = router;
