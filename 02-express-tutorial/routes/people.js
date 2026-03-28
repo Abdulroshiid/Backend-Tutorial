@@ -19,7 +19,7 @@ router.post("/", (req, res) => {
   res.status(201).send({ succcess: true, person: name });
 });
 
-router.post("/api/people/postman", (req, res) => {
+router.post("/postman", (req, res) => {
   const { name } = req.body;
   if (!name) {
     return res
@@ -31,7 +31,7 @@ router.post("/api/people/postman", (req, res) => {
 
 // THE PUT METHOD
 
-router.put("/api/people/:id", (req, res) => {
+router.put("/:id", (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
 
@@ -54,7 +54,7 @@ router.put("/api/people/:id", (req, res) => {
 
 // THE DELETE METHOD
 
-router.delete("/api/people/:id", (req, res) => {
+router.delete("/:id", (req, res) => {
   const person = people.find((person) => person.id === Number(req.params.id));
 
   if (!person) {
