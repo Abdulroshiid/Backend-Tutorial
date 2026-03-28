@@ -1,6 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
+const {
+  getUser,
+  post,
+  postUser,
+  updateUser,
+  deleteUser,
+} = require("../controllers/people");
+
 router.get("/");
 
 // THE POST METHOD
