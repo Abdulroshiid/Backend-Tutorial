@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
+let { people } = require("./data");
+
 router.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
@@ -35,12 +37,10 @@ router.put("/api/people/:id", (req, res) => {
 
   const person = people.find((person) => person.id === Number(id));
   if (!person) {
-    return res
-      .status(404)
-      .json({
-        success: false,
-        msg: `The person with id ${id} does not exists.`,
-      });
+    return res.status(404).json({
+      success: false,
+      msg: `The person with id ${id} does not exists.`,
+    });
   }
 
   const newPeople = people.map((person) => {
@@ -68,3 +68,5 @@ router.delete("/api/people/:id", (req, res) => {
   );
   return res.status(200).json({ success: true, data: newPerson });
 });
+
+module.exports = router;

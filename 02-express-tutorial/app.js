@@ -1,13 +1,17 @@
 const express = require("express");
 const app = express();
 const PORT = 5000;
-let { people } = require("./data");
+
+const people = require("./routes/people");
+
 // Static assets
 app.use(express.static("./methods-public"));
 // Parse form data
 app.use(express.urlencoded({ extended: false }));
 // parse json
 app.use(express.json());
+
+app.use("api/people");
 
 app.post("/login", (req, res) => {
   const { name } = req.body;
