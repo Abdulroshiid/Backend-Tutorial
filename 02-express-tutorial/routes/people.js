@@ -3,13 +3,13 @@ const router = express.Router();
 
 let { people } = require("./data");
 
-router.get("/api/people", (req, res) => {
+router.get("/", (req, res) => {
   res.status(200).json({ success: true, data: people });
 });
 
 // THE POST METHOD
 
-router.post("/api/people", (req, res) => {
+router.post("/", (req, res) => {
   const { name } = req.body;
   if (!name) {
     return res
